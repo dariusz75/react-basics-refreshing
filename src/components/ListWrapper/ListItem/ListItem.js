@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './ListItem.css';
 
 
@@ -12,5 +13,16 @@ const ListItem = (props) => (
     </div>
   </li>
 );
+
+ListItem.propTypes = {
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  link: PropTypes.string.isRequired
+};
+
+ListItem.defaultProps = {
+  description: 'This is an example of default description from defaultProps. To make it working we removed description from Dan Abramov object',
+};
 
 export default ListItem;

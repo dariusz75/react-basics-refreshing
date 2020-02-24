@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 
 import ListWrapper from './components/ListWrapper/ListWrapper';
+import Form from './components/Form/Form';
 
 const initialStateArray = [
   {
@@ -35,12 +36,18 @@ class App extends React.Component {
     items: [...initialStateArray]
   }
 
+  addItem = (e) => {
+    e.preventDefault();
+    console.log(e.target[0].value);
+  }
+
   render() {
     return (
       <div className="App">
         <ListWrapper
           items={this.state.items}
         />
+        <Form submitFn={this.addItem} />
       </div>
     );
   }

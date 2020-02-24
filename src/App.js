@@ -38,7 +38,20 @@ class App extends React.Component {
 
   addItem = (e) => {
     e.preventDefault();
-    console.log(e.target[0].value);
+
+    const newItam = {
+      name: e.target[0].value,
+      twitterLink: e.target[1].value,
+      image: e.target[2].value,
+      description: e.target[3].value
+    }
+
+    this.setState(prevState => ({
+      items: [...prevState.items, newItam]
+    }));
+
+    e.target.reset();
+
   }
 
   render() {

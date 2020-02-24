@@ -3,10 +3,12 @@ import React from 'react';
 class MyClassComponent extends React.Component {
   state = {
     text: 'This text comes from state.',
-    inputText: ''
+    inputText: 'Input text will change'
   }
 
-  onChangeHandler = (event) => console.log(event.target.value);
+  onChangeHandler = (event) => {
+    this.setState({ inputText: event.target.value });
+  }
 
   render() {
     return (
@@ -18,7 +20,7 @@ class MyClassComponent extends React.Component {
           placeholder="Enter your text"
           onChange={this.onChangeHandler}
         />
-        <h2>{this.state.inputText}</h2>
+        <h5>{this.state.inputText}</h5>
       </>
     );
   }

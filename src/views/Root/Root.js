@@ -1,8 +1,10 @@
 import React from 'react';
-import './App.css';
+import './Root.css';
 
-import ListWrapper from './components/ListWrapper/ListWrapper';
-import Form from './components/Form/Form';
+import ArticlesView from '../ArticlesView/ArticlesView';
+import NotesView from '../NotesView/NotesView';
+import TwittersView from '../TwittersView/TwittersView';
+
 
 const initialStateArray = [
   {
@@ -18,7 +20,7 @@ const initialStateArray = [
   }
 ];
 
-class App extends React.Component {
+class Root extends React.Component {
 
   state = {
     items: [...initialStateArray]
@@ -45,10 +47,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <ListWrapper
-          items={this.state.items}
-        />
-        <Form submitFn={this.addItem} />
+        <h1>Hello World!</h1>
       </div>
     );
   }
@@ -56,4 +55,4 @@ class App extends React.Component {
 }
 
 
-export default App;
+export default Root;

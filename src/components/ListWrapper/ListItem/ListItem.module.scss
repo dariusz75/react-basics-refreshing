@@ -10,7 +10,7 @@
   }
 }
 
-.listItem__wrapper {
+.wrapper {
   position: relative;
   margin: 0;
   padding: 50px 30px;
@@ -20,7 +20,7 @@
   animation: appear 1s ease;
 }
 
-.listItem__image {
+.image {
   margin-right: 30px;
   width: 150px;
   height: 150px;
@@ -28,18 +28,24 @@
   flex-shrink: 0;
 }
 
-.listItem__name {
+.imageNone {
+  @extend .image;
+
+  background: lightgrey;
+}
+
+.name {
   margin: 0;
   color: #1e58ff;
   font-weight: 700;
 }
 
-.listItem__description {
+.description {
   margin: 10px 0;
   font-weight: 300;
 }
 
-.listItem__button {
+.button {
   padding: 5px 10px;
   font-weight: 500;
   background: none;

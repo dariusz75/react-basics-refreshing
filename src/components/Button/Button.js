@@ -1,10 +1,13 @@
 import React from 'react';
 import styles from './Button.module.scss';
 
-const Button = ({ children, href }) => {
+const Button = ({ children, href, primary, secondary }) => {
+
+  const buttonClass = primary ? styles.buttonPrimary : secondary ? styles.buttonSecondary : styles.button;
 
   const aTag = () => (
-    <a className={styles.button}
+    <a
+      className={buttonClass}
       href={href}
       target="_blank"
       rel="noopener noreferrer" >
@@ -12,10 +15,12 @@ const Button = ({ children, href }) => {
     </a >);
 
   const buttonTag = () => (
-    <button type="submit" className={styles.button}>
+    <button type="submit"
+      className={buttonClass}>
       {children}
     </button>
   );
+
 
   return (
     <>

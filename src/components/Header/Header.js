@@ -7,7 +7,7 @@ import Button from '../Button/Button';
 const Header = () => (
   <header className={styles.wrapper}>
     <Navigation></Navigation>
-    <Button>Add Item</Button>
+    <Button secondary >Add Item</Button>
   </header>
 );
 

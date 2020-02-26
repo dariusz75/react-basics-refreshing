@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ArticlesView from '../ArticlesView/ArticlesView';
 import NotesView from '../NotesView/NotesView';
 import TwittersView from '../TwittersView/TwittersView';
-import Navigation from '../../components/Navigation/Navigation';
+import Navigation from '../../components/Header/Navigation';
 
 
 const initialStateArray = [

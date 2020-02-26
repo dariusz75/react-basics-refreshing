@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ArticlesView from '../ArticlesView/ArticlesView';
 import NotesView from '../NotesView/NotesView';
 import TwittersView from '../TwittersView/TwittersView';
+import Navigation from '../../components/Navigation/Navigation';
 
 
 const initialStateArray = [
@@ -51,6 +52,7 @@ class Root extends React.Component {
       <div className="App">
         <BrowserRouter>
           <>
+            <Navigation />
             <h1>Hello World!</h1>
             <Switch>
               <Route exact path="/" component={TwittersView} />

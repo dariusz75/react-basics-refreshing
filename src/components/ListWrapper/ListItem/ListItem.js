@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ListItem.module.scss';
 
+import Button from './../../Button/Button';
+
 
 const ListItem = (props) => {
 
@@ -24,6 +26,7 @@ const ListItem = (props) => {
           rel="noopener noreferrer">
           Visit Twitter page
         </a>
+        <Button href={twitterLink}>Visit Twitter page new button</Button>
       </div>
     </li>
   );

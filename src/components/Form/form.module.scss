@@ -1,17 +1,14 @@
 .wrapper {
-  width: 50%;
-  margin: 50px auto 100px;;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  h2 {
+  h3 {
+    margin-bottom: 10px;
     color: #1E58FF;
   }
-}
-
-h2 {
-  color: #1E58FF;
 }
 
 .form__form {
@@ -25,14 +22,14 @@ h2 {
 
 .form__item {
   width: 100%;
-  margin: 24px 0;
+  margin: 15px 0;
   position: relative;
   flex-shrink: 0;
 }
 
 .forms__item__bar {
     width: 100%;
-    height: 2px;
+    height: 1px;
     background: #7d7d7d;
     transition: .1s all;
   }
@@ -57,7 +54,7 @@ input, textarea {
   
 textarea {
   resize: none;
-  min-height: 150px;
+  min-height: 130px;
 }
   
 input:focus, textarea:focus {

@@ -5,7 +5,7 @@ import Button from './../Button/Button';
 
 const Form = ({ submitFn }) => (
   <div className={styles.wrapper}>
-    <h2>Add new twitter account</h2>
+    <h3>Add new twitter account</h3>
     <form className={styles.form__form} onSubmit={submitFn}>
       <div className={styles.form__item}>
         <input
@@ -38,7 +38,7 @@ const Form = ({ submitFn }) => (
           placeholder=" "
         />
         <label htmlFor="image">Image</label>
-        <div className={styles.orms__item__bar}></div>
+        <div className={styles.forms__item__bar}></div>
       </div>
       <div className={styles.form__item}>
         <textarea
@@ -50,8 +50,7 @@ const Form = ({ submitFn }) => (
         <label htmlFor="description">Description</label>
         <div className={styles.forms__item__bar}></div>
       </div>
-      <button type="submit" className={styles.form__button}>Add new item</button>
-      <Button>Add new Item new button</Button>
+      <Button primary >Add new Item</Button>
     </form>
   </div>
 );

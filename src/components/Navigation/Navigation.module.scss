@@ -1,3 +1,18 @@
 .wrapper {
-  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
+
+.navigationItem {
+  list-style: none;
+
+  .link {
+    text-decoration: none;
+    color: #818181;
+    }
+  
+    .activeLink{
+      font-weight: 700;
+    } 
+}
+

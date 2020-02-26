@@ -1,14 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import styles from './Navigation.module.scss';
 
 const Navigation = () => (
   <nav>
     <ul className={styles.wrapper}>
-      <li className={styles.navigationItem}><Link to="/">Twitters</Link></li>
-      <li className={styles.navigationItem}><Link to="/articles">Articles</Link></li>
-      <li className={styles.navigationItem}><Link to="/notes">Notes</Link></li>
+      <li className={styles.navigationItem}>
+        <NavLink exact className={styles.link} activeClassName={styles.activeLink} to="/">Twitters</NavLink>
+      </li>
+      <li className={styles.navigationItem}>
+        <NavLink className={styles.link} activeClassName={styles.activeLink} to="/articles">Articles</NavLink>
+      </li>
+      <li className={styles.navigationItem}>
+        <NavLink className={styles.link} activeClassName={styles.activeLink} to="/notes">Notes</NavLink>
+      </li>
     </ul>
   </nav>
 );

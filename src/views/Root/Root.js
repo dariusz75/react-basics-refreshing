@@ -29,7 +29,7 @@ class Root extends React.Component {
 
   state = {
     items: [...initialStateArray],
-    isModalOpen: false,
+    isModalOpen: true,
   }
 
   openModalHandler = () => {

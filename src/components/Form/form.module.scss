@@ -14,15 +14,11 @@
 .form__form {
   width: 100%;
   max-width: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 .form__item {
   width: 100%;
-  margin: 15px 0;
+  margin: 25px 0;
   position: relative;
   flex-shrink: 0;
 }
@@ -83,4 +79,10 @@ input:focus ~ .forms__item__bar, textarea:focus ~ .forms__item__bar {
   background: none;
   border: 2px solid #1E58FF;
   color: #1E58FF;
+}
+
+.ratio {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
 }

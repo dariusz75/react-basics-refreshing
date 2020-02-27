@@ -28,7 +28,20 @@ const initialStateArray = [
 class Root extends React.Component {
 
   state = {
-    items: [...initialStateArray]
+    items: [...initialStateArray],
+    isModalOpen: false,
+  }
+
+  openModalHandler = () => {
+    this.setState({
+      isModalOpen: true
+    });
+  }
+
+  closeModalHandler = () => {
+    this.setState({
+      isModalOpen: false
+    });
   }
 
   addItem = (e) => {
@@ -50,11 +63,14 @@ class Root extends React.Component {
   }
 
   render() {
+
+    const isModalOpen = this.state.isModalOpen;
+
     return (
       <div className="App">
         <BrowserRouter>
           <>
-            <Header />
+            <Header openModal={this.openModalHandler} />
             <h1>Hello World!</h1>
             <Switch>
               <Route exact path="/" component={TwittersView} />
@@ -62,7 +78,7 @@ class Root extends React.Component {
               <Route path="/notes" component={NotesView} />
               <Route path="/notes/:id" component={NotesView} />
             </Switch>
-            <Modal />
+            {isModalOpen && <Modal closeModal={this.closeModalHandler} />}
           </>
         </BrowserRouter>
       </div>

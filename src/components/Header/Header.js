@@ -4,10 +4,10 @@ import styles from './Header.module.scss';
 import Navigation from './Navigation';
 import Button from '../Button/Button';
 
-const Header = () => (
+const Header = (props) => (
   <header className={styles.wrapper}>
     <Navigation></Navigation>
-    <Button secondary >Add Item</Button>
+    <Button secondary onClick={props.openModal} >Add Item</Button>
   </header>
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Button.module.scss';
 
-const Button = ({ children, href, primary, secondary }) => {
+const Button = ({ children, href, primary, secondary, ...props }) => {
 
   const buttonClass = primary ? styles.buttonPrimary : secondary ? styles.buttonSecondary : styles.button;
 
@@ -16,7 +16,9 @@ const Button = ({ children, href, primary, secondary }) => {
 
   const buttonTag = () => (
     <button type="submit"
-      className={buttonClass}>
+      className={buttonClass}
+      {...props}
+    >
       {children}
     </button>
   );

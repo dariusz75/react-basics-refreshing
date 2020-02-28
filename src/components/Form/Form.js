@@ -70,27 +70,50 @@ class Form extends React.Component {
             <label htmlFor="name">Name</label>
             <div className={styles.forms__item__bar}></div>
           </div>
+
           <div className={styles.form__item}>
-            <input
-              type="text"
-              name="link"
-              id="link"
-              placeholder=" "
-              required
-            />
-            <label htmlFor="link">Link</label>
-            <div className={styles.forms__item__bar}></div>
+
+            {this.state.activeOption === 'twitter' ?
+              <>
+                <input
+                  type="text"
+                  name="link"
+                  id="link"
+                  placeholder=" "
+                  required
+                />
+                <label htmlFor="link">Twitter link</label>
+                <div className={styles.forms__item__bar}></div>
+              </>
+              : this.state.activeOption === 'article' ?
+                <>
+                  <input
+                    type="text"
+                    name="link"
+                    id="link"
+                    placeholder=" "
+                    required
+                  />
+                  <label htmlFor="link">Article link</label>
+                  <div className={styles.forms__item__bar}></div>
+                </>
+                : null
+            }
+
+
           </div>
-          <div className={styles.form__item}>
-            <input
-              type="text"
-              name="image"
-              id="image"
-              placeholder=" "
-            />
-            <label htmlFor="image">Image</label>
-            <div className={styles.forms__item__bar}></div>
-          </div>
+          {this.state.activeOption === 'twitter' ?
+            <div className={styles.form__item}>
+              <input
+                type="text"
+                name="image"
+                id="image"
+                placeholder=" "
+              />
+              <label htmlFor="image">Image</label>
+              <div className={styles.forms__item__bar}></div>
+            </div>
+            : null}
           <div className={styles.form__item}>
             <textarea
               name="description"

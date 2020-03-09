@@ -2,13 +2,13 @@ import React from 'react';
 import './ListItem.css';
 
 
-const ListItem = (props) => (
+const ListItem = ({ image, name, description, link }) => (
   <li className="listItem__wrapper">
-    <img className="listItem__image" src={props.image} alt={props.name} />
+    <img className="listItem__image" src={image} alt={name} />
     <div>
-      <h2 className="listItem__name">{props.name}</h2>
-      <p className="listItem__description">{props.description}</p>
-      <a className="listItem__button" href={props.link} target="_blank">Visit Twitter page</a>
+      <h2 className="listItem__name">{name}</h2>
+      <p className="listItem__description">{description}</p>
+      <a className="listItem__button" href={link} target="_blank">Visit Twitter page</a>
     </div>
   </li>
 );
